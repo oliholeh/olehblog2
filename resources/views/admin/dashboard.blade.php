@@ -1,7 +1,6 @@
 @extends('admin.layouts.app_admin')
 
 @section('content')
-  <div class="container">
     <div class="row">
       <div class="col-sm-3">
         <div class="jumbotron">
@@ -27,7 +26,7 @@
     <div class="row">
       <div class="col-sm-6">
         <div class="list-group">
-          <a href="#" class="btn btn-default btn-block">Создать категорию</a>
+          <a href="{{route('admin.category.create')}}" class="btn btn-default btn-block">Создать категорию</a>
           <a href="#" class="list-group-item">
             <h4 class="list-group-item-heading">Категория первая</h4>
             <p class="list-group-iten-text">Количество материалов</p>
@@ -44,5 +43,4 @@
         </div>
       </div>
     </div>
-  </div>
 @endsection
