@@ -3,14 +3,15 @@
 @section('content')
 
   @component('admin.components.breadcrumb')
-    @slot('title') Создание категории @endslot
+    @slot('title') Редактирование категории @endslot
     @slot('parent') Главная @endslot
     @slot('active') Категории @endslot
   @endcomponent
 
   <hr>
 
-  <form class="form-horizontal" action="{{route('admin.category.store')}}" method="post">
+  <form class="form-horizontal" action="{{route('admin.category.update', $category)}}" method="post">
+    <input type="hidden" name="_method" value="put">
     {{ csrf_field() }}
     @include('admin.categories.partials.form')
   </form>
